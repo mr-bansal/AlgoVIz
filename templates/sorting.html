@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <script src="https://kit.fontawesome.com/3a8a23819e.js" crossorigin="anonymous"></script>
+     <link rel="icon" href="../img/logo.png" />
+     <link rel="stylesheet" href="../css/sorting.css" />
+     <title>Sorting Algorithm Visualizer</title>
+</head>
+
+<body>
+     <nav>
+          <div class="mobile-logo">
+               <br />
+               <h1>
+                    <a href="../index.html">Algo<span>Visualization</span></a>
+                    <br>
+               </h1>
+          </div>
+          <div class="logo">
+               <a href="../index.html">Algo<span>Viz</span></a>
+          </div>
+          <ul>
+               <li><a href='../index.html'><label>HOME</label></a></li>
+               <li>
+                    <a href="#">
+                         <select name="algo" id="algo" onchange="algoSelected()">
+                              <option value="" disabled selected>
+                                   CHOOSE ALGORITHM
+                              </option>
+                              <option value="1">BUBBLE SORT</option>
+                              <option value="3">INSERTION SORT</option>
+                              <option value="2">MERGE SORT </option>
+                              <option value="4">QUICK SORT </option>
+                         </select>
+                    </a>
+               </li>
+               <li>
+                    <a>
+                         <label for="size">SIZE </label>
+                         <input id="size" onchange="sizeChange()" type="range" min=5 max=40 step=1 value=20>
+                    </a>
+               </li>
+               <li>
+                    <a>
+                         <label for="speed">SPEED </label>
+                         <input id="speed" onchange="speedChange()" type="range" min=1 max=5 step=1 value=3>
+                    </a>
+               </li>
+          </ul>
+     </nav>
+     <br />
+     <h1 class="container heading" id="maintext">Pick An Algorithm!</h1>
+
+     <div class="container">
+          <button class="btn-success btn-lg btn-shadow btn-hover" id="sort" onclick="startSorting()">
+               Sort
+          </button>
+          <button class="btn-danger btn-lg btn-shadow btn-hover" id="reset" onclick="resetArray()">
+               Reset Array
+          </button>
+     </div>
+
+     <br /><br />
+
+     <div class="data-container">
+          <div class="row container" id="array-container">
+               <!-- Array elements will be dynamically generated here -->
+          </div>
+     </div>
+
+     <br /><br />
+
+     <div class="container">
+          <h1 class="result"></h1>
+     </div>
+     <br><br><br>
+
+     <script src="../js/sorting/sorting.js"></script>
+</body>
+
+</html>
